@@ -1,0 +1,33 @@
+clientid: 180000080
+oid: 6056
+mdStatus: 7
+mdErrorMsg: Погрешен безбедносен код
+ErrMsg: Погрешен безбедносен код
+Response: Error
+ProcReturnCode: 99
+oid: 6056
+Response: Error
+encoding: UTF-8
+ProcReturnCode: 99
+currency: MKD
+refreshtime: 10
+callbackCall: true
+amount: 500
+Fismi: a
+islemtipi: Auth
+storetype: 3D_PAY_HOSTING
+mdStatus: 7
+ErrCode: 3D-1004
+failUrl: https://jsptest.t.mk:46159/callback/HalkBankMK
+clientIp: 195.26.154.105
+ErrMsg: Погрешен безбедносен код
+clientid: 180000080
+mdErrorMsg: Погрешен безбедносен код
+taksit: 
+okUrl: https://jsptest.t.mk:46159/callback/HalkBankMK
+lang: en
+xid: v22541NHQv93jNSRcsOkoyoMCUI=
+HASH: 3DXYGMu8wpaw/6ASYsZkzKODpx8=
+rnd: N1RouzzKZAgOjw0cCyjX
+HASHPARAMS: clientid:oid:rnd:
+HASHPARAMSVAL: 1800
