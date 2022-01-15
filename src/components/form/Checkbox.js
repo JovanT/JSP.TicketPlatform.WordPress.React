@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { at } from 'lodash';
 import { CheckboxWrapper } from './Style';
+import { useField } from 'formik';
 
 const Checkbox = (props) => {
   const { value, name, handleBlur, handleChange, error, children } = props;
+  const [field, meta] = useField(props);
+  const [errorText, setErrorText] = useState(null);
+
   return (
     <CheckboxWrapper>
       <input
@@ -13,11 +18,12 @@ const Checkbox = (props) => {
         value={value}
         onChange={handleChange}
         onBlur={handleBlur}
+        {...field}
       />
       <label className="form-check-label" htmlFor="exampleCheck1">
         {children}
       </label>
-      {error ? <p>{error}</p> : null}
+      {meta.touched && meta.error ? <p>{meta.error}</p> : null}
     </CheckboxWrapper>
   );
 };

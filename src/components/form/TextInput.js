@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { at } from 'lodash';
 import { TextInputWrapper } from './Style';
+import { useField } from 'formik';
 
 const TextInput = (props) => {
-  const { type, placeholder, name, value, handleChange, handleBlur, error } =
-    props;
+  const { errorText, handleChange, handleBlur, placeholder } = props;
+  const [field, meta] = useField(props);
+  const { type, error } = props;
 
   return (
     <TextInputWrapper>
@@ -11,12 +14,9 @@ const TextInput = (props) => {
         type={type}
         className="form-control"
         placeholder={placeholder}
-        name={name}
-        value={value}
-        onChange={handleChange}
-        onBlur={handleBlur}
+        {...field}
       />
-      {error ? <p>{error}</p> : null}
+      {meta.touched && meta.error ? <p className='danger'>{meta.error}</p> : null}
     </TextInputWrapper>
   );
 };

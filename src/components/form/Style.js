@@ -24,8 +24,8 @@ const TextInputWrapper = styled.div`
     }
   }
   p {
-    color: #747474;
-    font-size: 1rem;
+    color: #ff0000;
+    font-size: 0.8rem;
   }
 `
 const LabelWrapper = styled.div`
