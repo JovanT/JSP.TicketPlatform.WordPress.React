@@ -2,11 +2,20 @@ import styled from 'styled-components'
 
 const TextInputWrapper = styled.div`
   .form-control {
-    border-radius: 3px;
-    border: 1px solid #e0e0e0 !important;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    color: #222 !important;
-    font-weight: 400;
+    padding: 0rem 0rem 0.3rem 0rem;
+    background: linear-gradient(#D80C0C, #D80C0C), linear-gradient(#D80C0C, #D80C0C), linear-gradient(#D80C0C, #D80C0C);
+    background-size: 0px 20%, 100% 2px, 2px 20%;
+    background-position: bottom left, bottom center, bottom right;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+
+    &:after {
+      font-size: 0.95rem;
+      color: #fff;
+      font-weight: 300;
+    }
 
     &::placeholder {
       font-size: 0.95rem;
@@ -15,8 +24,14 @@ const TextInputWrapper = styled.div`
     }
   }
   p {
-    color: #ff0000;
-    font-size: 0.8rem;
+    color: #747474;
+    font-size: 1rem;
+  }
+`
+const LabelWrapper = styled.div`
+  p {
+    color: #000000;
+    font: normal normal bold 1rem Open Sans;
   }
 `
 
@@ -49,12 +64,24 @@ const CheckboxWrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   .btn {
-    border: 1px solid #a20c25;
-    background-color: #a20c25;
+    border: 1px solid #D80C0C;
+    background-color: #D80C0C;
     color: #fff;
-    border-radius: 3px;
-    padding: 0.3rem 5rem 0.3rem 5rem;
-    font-weight: 300;
+    border-radius: 13px;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    font: normal normal bold 1rem Open Sans;
+    width: 100%;
+  }
+`
+
+const ButtonInverseWrapper = styled.div`
+  .btn {
+    border: 2px solid #D80C0C;
+    background-color: #FFFFFF;
+    color: #D80C0C;
+    border-radius: 13px;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    font: normal normal bold 1rem Open Sans;
     width: 100%;
   }
 `
@@ -79,4 +106,4 @@ const SelectWrapper = styled.div`
   }
 `
 
-export { TextInputWrapper, CheckboxWrapper, ButtonWrapper, SelectWrapper }
+export { LabelWrapper, TextInputWrapper, CheckboxWrapper, ButtonWrapper, ButtonInverseWrapper, SelectWrapper }

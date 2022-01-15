@@ -9,37 +9,41 @@ const LayoutWarpper = styled.div`
 
 const RegisterWrapper = styled.div`
   width: 100%;
-  overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
-  padding: 2rem;
+  background: transparent;
+  height: 100vh;
+  flex-wrap: wrap;
 
   .form-container {
-    border: 1px solid #eeeeee;
-    padding: 2rem;
+    display: flex;
+    justify-content: center;
     width: 50%;
+    flex-wrap: wrap;
 
-    .header-box {
-      text-align: center;
-      border-bottom: 1px solid #eeeeee;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      padding-top: 2rem;
-      background: #a20c25;
-      h4 {
-        font-size: 1.5rem;
-        color: #fff;
-        font-weight: 400;
+    .fields {
+      width: 100%;
+      padding: 2rem;
+      background: transparent;
+      height: 400px;
+      .header {
+        margin-bottom: 2rem;
+        h4 {
+          font: normal normal bold 2rem Open Sans;
+          color: #D80C0C;
+        }
       }
-    }
 
     .login-box {
-      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+
       p {
         font-size: 0.85rem;
         font-weight: 700;
+        align: center;
 
         .login-link {
           text-decoration: none;
@@ -59,49 +63,77 @@ const RegisterWrapper = styled.div`
 
   @media (min-width: 320px) {
     .form-container {
-      border: 1px solid #eeeeee;
-      padding: 2rem;
+      display: block;
+      margin: 0 auto;
       width: 100%;
+
+      .fields {
+        width: 100%;
+      }
     }
   }
 
   @media (min-width: 428px) {
     .form-container {
-      border: 1px solid #eeeeee;
-      padding: 2rem;
+      display: block;
+      margin: 0 auto;
       width: 100%;
+
+      .fields {
+        width: 100%;
+      }
     }
   }
 
   @media (min-width: 576px) {
     .form-container {
-      border: 1px solid #eeeeee;
-      padding: 2rem;
-      width: 100%;
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+
+      .fields {
+        width: 50%;
+      }
     }
   }
 
   @media (min-width: 768px) {
     .form-container {
-      border: 1px solid #eeeeee;
-      padding: 2rem;
+      display: block;
+      margin: 0 auto;
       width: 50%;
+
+      .fields {
+        width: 50%;
+      }
     }
   }
 
   @media (min-width: 992px) {
     .form-container {
+      display: flex;
+      justify-content: center;
       border: 1px solid #eeeeee;
-      padding: 2rem;
       width: 50%;
+      flex-wrap: wrap;
+
+      .fields {
+        width: 50%;
+      }
     }
   }
 
   @media (min-width: 1200px) {
     .form-container {
+      display: flex;
+      justify-content: center;
       border: 1px solid #eeeeee;
-      padding: 2rem;
       width: 50%;
+      flex-wrap: wrap;
+
+      .fields {
+        width: 50%;
+      }
     }
   }
 `
@@ -111,70 +143,49 @@ const LoginWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: transparent;
   height: 100vh;
   flex-wrap: wrap;
 
   .login-container {
     display: flex;
     justify-content: center;
-    border: 1px solid #eeeeee;
     width: 50%;
     flex-wrap: wrap;
 
     .fields {
-      width: 50%;
+      width: 100%;
       padding: 2rem;
-      border-right: 2px solid #eeeeee;
-      background: #fafafa;
-      height: 400px;
+      background: transparent;
       .header {
         margin-bottom: 2rem;
         h4 {
-          font-size: 1.5rem;
-          color: #a20c25;
-          font-weight: 400;
+          font: normal normal bold 2rem Open Sans;
+          color: #D80C0C;
         }
       }
 
       .login-box {
-        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
         p {
           font-size: 0.85rem;
-          font-weight: 700;
+          font-weight: 300;
 
           .login-link {
             text-decoration: none;
-            color: #a20c25;
+            color: #747474;
             font-weight: 400;
             transition: 0.5s all ease-in-out;
             cursor: pointer;
 
             &:hover {
               margin-bottom: 0.8rem;
-              border-bottom: 1px solid #a20c25;
+              border-bottom: 1px solid #747474;
             }
           }
-        }
-      }
-    }
-
-    .enroll {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      height: 400px;
-      align-items: center;
-
-      .btn-container {
-        .btn {
-          border: 1px solid #a20c25;
-          background-color: #a20c25;
-          color: #fff;
-          border-radius: 3px;
-          padding: 1rem 2rem 1rem 2rem;
-          font-weight: 300;
-          text-transform: uppercase;
         }
       }
     }
@@ -189,10 +200,6 @@ const LoginWrapper = styled.div`
       .fields {
         width: 100%;
       }
-
-      .enroll {
-        width: 100%;
-      }
     }
   }
 
@@ -205,10 +212,6 @@ const LoginWrapper = styled.div`
       .fields {
         width: 100%;
       }
-
-      .enroll {
-        width: 100%;
-      }
     }
   }
 
@@ -216,14 +219,10 @@ const LoginWrapper = styled.div`
     .login-container {
       display: block;
       margin: 0 auto;
-      width: 100%;
+      width: 50%;
 
       .fields {
-        width: 100%;
-      }
-
-      .enroll {
-        width: 100%;
+        width: 50%;
       }
     }
   }
@@ -232,14 +231,10 @@ const LoginWrapper = styled.div`
     .login-container {
       display: block;
       margin: 0 auto;
-      width: 100%;
+      width: 50%;
 
       .fields {
-        width: 100%;
-      }
-
-      .enroll {
-        width: 100%;
+        width: 50%;
       }
     }
   }
@@ -255,10 +250,6 @@ const LoginWrapper = styled.div`
       .fields {
         width: 50%;
       }
-
-      .enroll {
-        width: 50%;
-      }
     }
   }
 
@@ -271,10 +262,6 @@ const LoginWrapper = styled.div`
       flex-wrap: wrap;
 
       .fields {
-        width: 50%;
-      }
-
-      .enroll {
         width: 50%;
       }
     }

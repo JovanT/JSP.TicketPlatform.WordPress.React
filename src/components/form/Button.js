@@ -6,7 +6,7 @@ const Button = (props) => {
   return (
     <ButtonWrapper>
       <button
-        className={`btn ${loading ? 'new-btn' : 'pressed-btn'}`}
+        className={`btn ${loading ? 'new-btn' : 'pressed-btn'} mr-2`}
         type={type}
         disabled={loading}
       >

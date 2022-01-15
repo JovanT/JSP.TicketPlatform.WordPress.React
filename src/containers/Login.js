@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import appActions from '../store/app/actions'
 import { Alert } from 'reactstrap'
 import { useTranslation } from 'react-i18next'
+import { LabelWrapper, ButtonInverseWrapper } from '../components/form/Style'
 
 const { loginRequest, clearStates, setViewAction } = appActions
 
@@ -63,7 +64,7 @@ const Login = ({ onClickSetView }) => {
 
   return (
     <LoginWrapper>
-      <div className="login-container shadow-sm">
+      <div className="login-container">
         <div className="fields">
           <div className="header">
             <h4>{t('Log in')}</h4>
@@ -87,9 +88,12 @@ const Login = ({ onClickSetView }) => {
               }) => (
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
+                    <LabelWrapper>
+                      <p>{t('E-mail')}</p>
+                    </LabelWrapper>
                     <TextInput
                       type="email"
-                      placeholder={t('Email Address')}
+                      placeholder={t('Enter your e-mail')}
                       name="email"
                       value={values.email}
                       handleBlur={handleBlur}
@@ -100,9 +104,12 @@ const Login = ({ onClickSetView }) => {
                     />
                   </div>
                   <div className="mb-3">
+                    <LabelWrapper>
+                      <p>{t('Password')}</p>
+                    </LabelWrapper>
                     <TextInput
                       type="password"
-                      placeholder={t('Password')}
+                      placeholder={t('Enter your password')}
                       name="password"
                       value={values.password}
                       handleBlur={handleBlur}
@@ -126,41 +133,46 @@ const Login = ({ onClickSetView }) => {
                     >
                       {t('Remember me')}
                     </Checkbox>
+                    
                   </div> */}
-                  <div className="mt-4">
-                    <Button
-                      title={t('Submit')}
-                      type="submit"
-                      loading={isSubmitting}
-                    />
+                  <div className="login-box mt-4">
+                    <div className='px-2'>
+                      <Button
+                        title={t('Log in')}
+                        type="submit"
+                        loading={isSubmitting}
+                      />
+                    </div>
+                    <div className='px-2'>
+                      <ButtonInverseWrapper>
+                        <button type="button" className="btn btn-primary">
+                          <span
+                            className="login-link"
+                            onClick={() => onClickSetView(views.REGISTER)}
+                          >
+                            {t('Register')}
+                          </span>
+                        </button>
+                      </ButtonInverseWrapper>
+                    </div>
+                    <div className='px-2'>
+                      <p>
+                        <span
+                          className="login-link"
+                          onClick={() => onClickSetView(views.FORGOT_PASSWORD)}
+                        >
+                          {t('Forgotten password?')}
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </form>
               )}
             </Formik>
           </div>
-          <div className="login-box">
-            <p>
-              <span
-                className="login-link"
-                onClick={() => onClickSetView(views.FORGOT_PASSWORD)}
-              >
-                {t('Forgotten password?')}
-              </span>
-            </p>
-          </div>
-        </div>
-        <div className="enroll">
-          <div className="btn-container">
-            <button
-              className="btn"
-              onClick={() => onClickSetView(views.REGISTER)}
-            >
-              {t('Enroll Here')}
-            </button>
-          </div>
         </div>
       </div>
-    </LoginWrapper>
+    </LoginWrapper >
   )
 }
 
