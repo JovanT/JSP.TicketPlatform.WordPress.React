@@ -44,11 +44,13 @@ const ViewProducts = ({ onClickSetView }) => {
 
   return (
     <ViewProductWrapper>
-      <div className="card-box shadow-sm">
+       <div className="card-box shadow-sm rounded" >
+         <div>{t('Current card status')}</div>
+       </div>
+      <div className="card-box shadow-sm rounded-3">
         <div className="header-box">
           <h4>
-            {t('Available Products for')}{' '}
-            {user ? `${user.firstName} ${user.lastName}` : 'Mike Wazowski'}
+            {t('Available Product')}
           </h4>
           <div
             className="close-button"
@@ -58,16 +60,16 @@ const ViewProducts = ({ onClickSetView }) => {
           </div>
         </div>
         <div className="card-details">
-          <ol className="list-group list-group-numbered">
+          <div className="list-group list-group-numbered">
             {loading && isEmpty(products) ? (
               <Spinner />
             ) : (
               products.map((product) => (
-                <li
-                  className="list-group-item justify-content-between align-items-start"
+                <div
+                  className="list-group-item justify-content-between align-items-center"
                   key={product.id}
                 >
-                  <div className="productName">
+                  <div className="productName" tooltip={product?.zoneName}>
                     {product.productName
                       ? product.productName
                       : t('Card Product')}
@@ -80,19 +82,16 @@ const ViewProducts = ({ onClickSetView }) => {
                   <div className="amount">
                     {product.amount} {product.currencyName}
                   </div>
-                  <div>
-                    {product?.zoneName}
-                  </div>
                   <div
                     className="purchaseBtn"
                     onClick={() => onClickProduct(product)}
                   >
-                    <i className="fa fa-shopping-cart"></i>
+                    {t('Purchase')}
                   </div>
-                </li>
+                </div>
               ))
             )}
-          </ol>
+          </div>
         </div>
       </div>
     </ViewProductWrapper>

@@ -612,17 +612,18 @@ const ViewProductWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  background: #fff;
-  flex-wrap: wrap;
+  align-items: center;
+  background: transparent;
+  flex-direction: column;
 
   .card-box {
     display: block;
     border: 1px solid #eeeeee;
     width: 50%;
     background: #fff;
-    margin-top: 10rem;
+    margin-bottom: 1rem;
+    align:center;
     padding: 2rem;
-    border-radius: 5px;
 
     .header-box {
       display: flex;
@@ -679,32 +680,45 @@ const ViewProductWrapper = styled.div`
         font-size: 1rem;
         position: relative;
         display: flex;
-        padding: 0.5rem 1rem;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 0.75rem;
         color: #212529;
         text-decoration: none;
         background-color: #fff;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 1px solid #eeeeee;
         transition: all ease-in-out 1s;
 
         &:hover {
           background-color: #ddd;
         }
 
-        &:first-child {
-          border-top-left-radius: inherit;
-          border-top-right-radius: inherit;
-        }
-        .productName,
+        .productName {
+          border-radius: 16px;
+          color: #fff;
+          background-color: #00C770;
+          padding: 0.5rem 1rem;
+          font-weight: 600;
+          width: 200px;
+          text-align: center;
+        },
         .amount {
-          font-weight: 700;
+          font: normal normal normal 15px/19px Open Sans;
+
         }
         .purchaseBtn {
-          background-color: #a20c25;
+          border-radius: 16px;
+          background-color: #fff;
           padding: 0.2rem 0.4rem;
-          border-radius: 3px;
+          border: 1px solid #eeeeee;
+          padding: 0.5rem 1rem;
+          border-color: #000;
           i {
             font-size: 1rem;
-            color: #fff;
+            color: #000;
             cursor: pointer;
           }
         }
@@ -732,7 +746,7 @@ const ViewProductWrapper = styled.div`
       }
 
       .values {
-        width: 60%;
+        width: 30%;
         text-align: left;
         padding-left: 3rem;
 
