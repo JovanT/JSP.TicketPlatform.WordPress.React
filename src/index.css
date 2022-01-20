@@ -1,6 +1,30 @@
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   background: #fff;
+}
+.profile-top {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5em;
+}
+.profile-header {
+  margin: 10px 0 0 0;
+  display: flex;
+  width: 55%;
+  justify-content: center;
+}
+.profile-header h4 {
+  color: #d80c0c;
+}
+
+.profile-header .profile-image {
+  margin-right: 50px;
+}
+
+.back a {
+  color: #000000;
+  text-decoration: none;
 }

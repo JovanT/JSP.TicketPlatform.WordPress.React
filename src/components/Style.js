@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const SpinnerWrapper = styled.div`
   width: 100%;
@@ -52,6 +52,6 @@ const SpinnerWrapper = styled.div`
       stroke-dashoffset: -120px;
     }
   }
-`
+`;
 
-export { SpinnerWrapper }
+export { SpinnerWrapper };
