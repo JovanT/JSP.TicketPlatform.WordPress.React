@@ -544,7 +544,7 @@ const AddCardWrapper = styled.div`
     border: 1px solid #eeeeee;
     width: 30%;
     background: #fff;
-    margin-top: 10rem;
+    margin-top: 1rem;
     padding: 2rem;
     border-radius: 5px;
 
@@ -697,10 +697,10 @@ const ViewProductWrapper = styled.div`
         }
 
         .productName {
-          border-radius: 16px;
+          border-radius: 10px;
           color: #fff;
           background-color: #00c770;
-          padding: 0.5rem 1rem;
+          padding: 0.8rem 1rem;
           font-weight: 600;
           width: 200px;
           text-align: center;
@@ -709,7 +709,7 @@ const ViewProductWrapper = styled.div`
         .amount {
           font: normal normal normal 15px/19px Open Sans;
         }
-        .purchaseBtn {
+        . .purchaseBtn {
           border-radius: 16px;
           background-color: #fff;
           padding: 0.2rem 0.4rem;
