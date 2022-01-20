@@ -1,9 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const TextInputWrapper = styled.div`
   .form-control {
     padding: 0rem 0rem 0.3rem 0rem;
-    background: linear-gradient(#D80C0C, #D80C0C), linear-gradient(#D80C0C, #D80C0C), linear-gradient(#D80C0C, #D80C0C);
+    background: linear-gradient(#d80c0c, #d80c0c),
+      linear-gradient(#d80c0c, #d80c0c), linear-gradient(#d80c0c, #d80c0c);
     background-size: 0px 20%, 100% 2px, 2px 20%;
     background-position: bottom left, bottom center, bottom right;
     background-repeat: no-repeat;
@@ -27,13 +28,13 @@ const TextInputWrapper = styled.div`
     color: #ff0000;
     font-size: 0.8rem;
   }
-`
+`;
 const LabelWrapper = styled.div`
   p {
     color: #000000;
     font: normal normal bold 1rem Open Sans;
   }
-`
+`;
 
 const CheckboxWrapper = styled.div`
   .form-check-input {
@@ -60,31 +61,30 @@ const CheckboxWrapper = styled.div`
     color: #ff0000;
     font-size: 0.8rem;
   }
-`
+`;
 
 const ButtonWrapper = styled.div`
   .btn {
-    border: 1px solid #D80C0C;
-    background-color: #D80C0C;
+    ${'' /* border: 1px solid #d80c0c; */}
+    background-color: #bebebe;
     color: #fff;
-    border-radius: 13px;
-    padding: 0.3rem 1rem 0.3rem 1rem;
+    border-radius: 10px;
     font: normal normal bold 1rem Open Sans;
-    width: 100%;
+    width: 25%;
   }
-`
+`;
 
 const ButtonInverseWrapper = styled.div`
   .btn {
-    border: 2px solid #D80C0C;
-    background-color: #FFFFFF;
-    color: #D80C0C;
+    border: 2px solid #d80c0c;
+    background-color: #ffffff;
+    color: #d80c0c;
     border-radius: 13px;
     padding: 0.3rem 1rem 0.3rem 1rem;
     font: normal normal bold 1rem Open Sans;
     width: 100%;
   }
-`
+`;
 
 const SelectWrapper = styled.div`
   .form-control {
@@ -104,6 +104,13 @@ const SelectWrapper = styled.div`
     color: #ff0000;
     font-size: 0.8rem;
   }
-`
+`;
 
-export { LabelWrapper, TextInputWrapper, CheckboxWrapper, ButtonWrapper, ButtonInverseWrapper, SelectWrapper }
+export {
+  LabelWrapper,
+  TextInputWrapper,
+  CheckboxWrapper,
+  ButtonWrapper,
+  ButtonInverseWrapper,
+  SelectWrapper,
+};

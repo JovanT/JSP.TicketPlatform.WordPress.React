@@ -955,7 +955,7 @@ const EditProfileWrapper = styled.div`
     border: 1px solid #eeeeee;
     width: 30%;
     background: #fff;
-    margin-top: 10rem;
+    margin-top: 1rem;
     padding: 2rem;
     border-radius: 5px;
 

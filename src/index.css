@@ -4,6 +4,7 @@ body {
   font-size: 1rem;
   background: #fff;
 }
+/* View Profile */
 .profile-top {
   width: 80%;
   display: flex;
@@ -24,7 +25,29 @@ body {
   margin-right: 50px;
 }
 
-.back a {
+.back a,
+.logout {
   color: #000000;
   text-decoration: none;
+  cursor: pointer;
+}
+
+/* Edit Profile */
+.edit-profile-top {
+  width: 100%;
+  margin-top: 5em;
+  padding-left: 10%;
+}
+
+.edit-header-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.edit-header-box h4 {
+  color: #d80c0c;
+}
+.edit-profile-btn {
+  text-align: center;
 }

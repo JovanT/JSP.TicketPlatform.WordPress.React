@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { ViewProfileWrapper } from "./Style";
 import { views } from "../constants/views";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import userProfile from "../img/user.svg";
+import { useDispatch } from "react-redux";
+import appActions from "../store/app/actions";
+const { logout } = appActions;
 
 const ViewProfile = ({ onClickSetView }) => {
   const { t } = useTranslation();
   const appStore = useSelector((state) => state.app);
   const { user } = appStore;
+  const dispatch = useDispatch();
+
+  const onLogoutClick = useCallback(() => {
+    dispatch(logout());
+  }, [dispatch]);
 
   return (
     <ViewProfileWrapper>
@@ -20,7 +28,7 @@ const ViewProfile = ({ onClickSetView }) => {
           className="close-button"
           onClick={() => onClickSetView(views.PROFILE)}
         >
-          <i className="fa fa-close"></i>
+          <span className="logout" onClick={() => onLogoutClick()}>{t("Logout")}</span>
         </div>
       </div>
       <div className="profile-header">
