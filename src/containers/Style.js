@@ -434,7 +434,7 @@ const ProfileWrapper = styled.div`
     width: 70%;
     flex-wrap: wrap;
     background: #fafafa;
-    margin-top: 10rem;
+    margin-top: 1rem;
     padding: 2rem;
 
     .profile {
@@ -484,12 +484,13 @@ const ProfileWrapper = styled.div`
 
       .add-card {
         width: 20rem;
-        height: 10rem;
+        height: 12.5rem;
         border: 1px solid #eeeeee;
-        padding: 0.2rem;
         background: #fff;
-        cursor: pointer;
         border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+
         .inner-card {
           border: 1px solid #eeeeee;
           display: flex;
@@ -506,8 +507,7 @@ const ProfileWrapper = styled.div`
             rgba(162, 12, 37, 1) 0%,
             rgba(34, 34, 34, 1) 100%
           );
-          border: none;
-
+          border: 1px solid blue;
           text-align: center;
           display: flex;
           justify-content: center;
@@ -702,7 +702,7 @@ const ViewProductWrapper = styled.div`
           background-color: #00c770;
           padding: 0.8rem 1rem;
           font-weight: 600;
-          width: 200px;
+          width: 150px;
           text-align: center;
         }
         ,

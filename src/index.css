@@ -56,11 +56,32 @@ body {
 
 .amoun {
   color: #d80c0c;
+  font-weight: 600;
 }
 
 .purchaseBtn {
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px;
+  cursor: pointer;
+}
+
+/* Profile */
+
+.add-card img {
+  width: 20rem;
+  height: 10rem;
+}
+.add-card button {
+  background-color: #d80c0c;
+  margin: 0 50px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  padding: 2px;
+}
+
+.plus {
   cursor: pointer;
 }

@@ -7,6 +7,7 @@ import appActions from "../store/app/actions";
 import { CreditCard } from "react-feather";
 import { useTranslation } from "react-i18next";
 import "react-perfect-scrollbar/dist/css/styles.css";
+import profileImage from "../img/profileImage.png";
 
 const { logout, getUserCardsRequest, setUserCard, clearStates } = appActions;
 
@@ -91,20 +92,16 @@ const Profile = ({ onClickSetView }) => {
         {cards.length > 0
           ? cards.map((card) => (
               <div className="card-box" key={card.id}>
-                <div className="add-card" onClick={() => onClickCard(card)}>
-                  <div className="inner-card-alt">
-                    <div className="icon">
-                      <CreditCard size={40} />
-                      <h4>{card.name}</h4>
-                    </div>
-                  </div>
+                <div className="add-card">
+                  <img src={profileImage} />
+                  <button onClick={() => onClickCard(card)}>Top Up</button>
                 </div>
               </div>
             ))
           : null}
         <div className="card-box">
           <div
-            className="add-card"
+            className="add-card plus"
             onClick={() => onClickSetView(views.ADD_CARD)}
           >
             <div className="inner-card">
