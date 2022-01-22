@@ -90,7 +90,7 @@ const ProductDetails = ({ onClickSetView }) => {
                 id="FailURL"
                 value={`${APP_HOST}${STATUS_PATH}${FAILURE_QS}`}
               />
-              <Input
+              <input
                 type="hidden"
                 name="TransactionDescription"
                 id="TransactionDescription"
@@ -101,6 +101,12 @@ const ProductDetails = ({ onClickSetView }) => {
                 name="Amount"
                 id="Amount"
                 value={product.amount}
+              />
+              <input
+                type="hidden"
+                name="AdditionalInfo"
+                id="AdditionalInfo"
+                value={JSON.stringify(product)}
               />
               <button
                 type="submit"
