@@ -96,7 +96,7 @@ const Profile = ({ onClickSetView }) => {
                   <img
                     className="profile-image"
                     src={profileImage}
-                    onClick={() => onClickSetView(views.VIEW_PROFILE)}
+                    onClick={() => onClickCard(card)}
                   />
                   <button onClick={() => onClickCard(card)}>Top Up</button>
                 </div>
