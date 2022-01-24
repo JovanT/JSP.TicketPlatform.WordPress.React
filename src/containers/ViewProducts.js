@@ -50,6 +50,7 @@ const ViewProducts = ({ onClickSetView }) => {
 
   return (
     <ViewProductWrapper>
+    
       <div className="profile-top">
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
           <a href="#">Back</a>

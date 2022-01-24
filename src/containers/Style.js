@@ -709,8 +709,8 @@ const ViewProductWrapper = styled.div`
         .amount {
           font: normal normal normal 15px/19px Open Sans;
         }
-        . .purchaseBtn {
-          border-radius: 16px;
+        .purchaseBtn {
+          border-radius: 10px;
           background-color: #fff;
           padding: 0.2rem 0.4rem;
           border: 1px solid #eeeeee;
@@ -746,7 +746,7 @@ const ViewProductWrapper = styled.div`
       }
 
       .values {
-        width: 30%;
+        ${"" /* width: 30%; */}
         text-align: left;
         padding-left: 3rem;
 
@@ -1029,7 +1029,7 @@ const EditProfileWrapper = styled.div`
 `;
 
 const ViewCardWrapper = styled.div`
-  width: 100%;
+  ${"" /* width: 100%; */}
   display: flex;
   justify-content: center;
   background: #fff;
@@ -1113,7 +1113,6 @@ const ViewCardWrapper = styled.div`
     }
 
     .card-footer-alt {
-      display: flex;
       justify-content: space-between;
       padding-top: 1rem;
 

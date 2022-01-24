@@ -63,15 +63,15 @@ const Profile = ({ onClickSetView }) => {
       </div>
       <div className="profile-box">
         <div className="profile">
-          <div className="profile-image">
+          {/* <div className="profile-image">
             <img
               src={userProfile}
               alt="user"
               width="100"
               onClick={() => onClickSetView(views.VIEW_PROFILE)}
             />
-          </div>
-          <div className="profile-details">
+          </div> */}
+          {/* <div className="profile-details">
             <h4>
               {user ? `${user.firstName} ${user.lastName}` : "Mike Wazowski"}
             </h4>
@@ -87,13 +87,17 @@ const Profile = ({ onClickSetView }) => {
               </span>
               | <span onClick={() => onLogoutClick()}>{t("Logout")}</span>
             </h3>
-          </div>
+          </div> */}
         </div>
         {cards.length > 0
           ? cards.map((card) => (
               <div className="card-box" key={card.id}>
                 <div className="add-card">
-                  <img src={profileImage} />
+                  <img
+                    className="profile-image"
+                    src={profileImage}
+                    onClick={() => onClickSetView(views.VIEW_PROFILE)}
+                  />
                   <button onClick={() => onClickCard(card)}>Top Up</button>
                 </div>
               </div>

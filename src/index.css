@@ -82,6 +82,71 @@ body {
   padding: 2px;
 }
 
-.plus {
+.plus,
+.profile-image {
   cursor: pointer;
+}
+
+/* Product Details */
+
+.confirm-btn {
+  border-radius: 10px;
+  background-color: #d80c0c;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #eeeeee;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+/* View Card */
+.viewcard {
+  display: flex;
+}
+.card-footer-alt {
+  width: 420px;
+}
+
+.details {
+  padding-top: 100px;
+  font-weight: 600;
+  width: 300px;
+}
+.topID h4 {
+  border-bottom: 2px solid grey;
+  color: #d80c0c;
+}
+.view-card-button {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-card-button button:first-child {
+  background-color: #d80c0c;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid red;
+}
+.view-card-button button:last-child {
+  background-color: #fff;
+  padding: 15px;
+  color: #d80c0c;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid red;
+}
+
+.view-card-button h4 {
+  margin-left: 40px;
+}
+.active-service {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 10px;
+}
+.active-service button {
+  background-color: green;
 }
