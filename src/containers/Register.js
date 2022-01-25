@@ -48,7 +48,6 @@ const Register = ({ onClickSetView }) => {
 
   function _handleSubmit(values, actions) {
     if (isLastStep) {
-      console.log(values);
       onSubmit(values);
     } else {
       setActiveStep(activeStep + 1);
@@ -70,8 +69,9 @@ const Register = ({ onClickSetView }) => {
     if (isRegistered) {
       dispatch(setViewAction(views.LOGIN))
     }
-    if (error && error.response) {
-      setError(error.response.data)
+    if (error) {
+      setError(error)
+      onClickSetView(views.REGISTER_FAILURE)
     }
   }, [appStore, dispatch])
 
