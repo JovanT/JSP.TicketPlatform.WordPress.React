@@ -11,7 +11,6 @@ import appActions from "../store/app/actions";
 import { Alert } from "reactstrap";
 import { useTranslation } from "react-i18next";
 import { LabelWrapper, ButtonInverseWrapper } from "../components/form/Style";
-import RegistrationSuccess from "./Success/RegistrationSuccess";
 
 const { loginRequest, clearStates, setViewAction } = appActions;
 
