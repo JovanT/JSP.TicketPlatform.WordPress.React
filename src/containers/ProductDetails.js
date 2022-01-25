@@ -55,11 +55,6 @@ const ProductDetails = ({ onClickSetView }) => {
       </div>
       <div className="card-box shadow-sm">
         <div className="card-details">
-          {/* <div className="labels">
-            <p>{t("Product")}:</p>
-            <p>{t("Valid")}:</p>
-            <p>{t("Amount")}</p>
-          </div> */}
           <div className="list-group ">
             <div className="list-group-item justify-content-between align-items-center">
               <div className="productName">

@@ -49,6 +49,12 @@ const Profile = ({ onClickSetView }) => {
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
           <a>Card</a>
         </div>
+        <div
+          className="back"
+          onClick={() => onClickSetView(views.VIEW_PROFILE)}
+        >
+          <a>View Profile</a>
+        </div>
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
           <a>Card History</a>
         </div>
@@ -62,33 +68,6 @@ const Profile = ({ onClickSetView }) => {
         </div>
       </div>
       <div className="profile-box">
-        <div className="profile">
-          {/* <div className="profile-image">
-            <img
-              src={userProfile}
-              alt="user"
-              width="100"
-              onClick={() => onClickSetView(views.VIEW_PROFILE)}
-            />
-          </div> */}
-          {/* <div className="profile-details">
-            <h4>
-              {user ? `${user.firstName} ${user.lastName}` : "Mike Wazowski"}
-            </h4>
-            <h6>{user ? user.email : "bohan3d@gmail.com"}</h6>
-            <h3>
-              <span onClick={() => onClickSetView(views.VIEW_PROFILE)}>
-                {t("View Profile")}
-              </span>{" "}
-              |{" "}
-              <span onClick={() => onClickSetView(views.VIEW_PRODUCTS)}>
-                {" "}
-                {t("View Products")}{" "}
-              </span>
-              | <span onClick={() => onLogoutClick()}>{t("Logout")}</span>
-            </h3>
-          </div> */}
-        </div>
         {cards.length > 0
           ? cards.map((card) => (
               <div className="card-box" key={card.id}>

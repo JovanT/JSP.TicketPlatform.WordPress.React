@@ -53,7 +53,7 @@ const ViewProducts = ({ onClickSetView }) => {
     
       <div className="profile-top">
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
-          <a href="#">Back</a>
+          <a>Back</a>
         </div>
         <div
           className="close-button"

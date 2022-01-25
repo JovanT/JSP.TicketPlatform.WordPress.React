@@ -76,7 +76,7 @@ const AddCard = ({ onClickSetView }) => {
     <AddCardWrapper>
       <div className="edit-profile-top">
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
-          <a href="#">Back</a>
+          <a>Back</a>
         </div>
       </div>
       <div className="edit-header-box">
@@ -163,13 +163,13 @@ const AddCard = ({ onClickSetView }) => {
                   />
                 </div>
                 <div className="mt-4">
-                <div className="edit-profile-btn">
-
-                  <Button
-                    title={t("Submit")}
-                    type="submit"
-                    loading={isSubmitting}
-                  /></div>
+                  <div className="edit-profile-btn">
+                    <Button
+                      title={t("Submit")}
+                      type="submit"
+                      loading={isSubmitting}
+                    />
+                  </div>
                 </div>
               </form>
             )}

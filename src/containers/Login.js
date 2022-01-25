@@ -1,73 +1,74 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { LoginWrapper } from './Style'
-import { Formik } from 'formik'
-import * as Yup from 'yup'
-import TextInput from '../components/form/TextInput'
+import React, { useState, useEffect, useCallback } from "react";
+import { LoginWrapper } from "./Style";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import TextInput from "../components/form/TextInput";
 // import Checkbox from '../components/form/Checkbox'
-import Button from '../components/form/Button'
-import { views } from '../constants/views'
-import { useSelector, useDispatch } from 'react-redux'
-import appActions from '../store/app/actions'
-import { Alert } from 'reactstrap'
-import { useTranslation } from 'react-i18next'
-import { LabelWrapper, ButtonInverseWrapper } from '../components/form/Style'
+import Button from "../components/form/Button";
+import { views } from "../constants/views";
+import { useSelector, useDispatch } from "react-redux";
+import appActions from "../store/app/actions";
+import { Alert } from "reactstrap";
+import { useTranslation } from "react-i18next";
+import { LabelWrapper, ButtonInverseWrapper } from "../components/form/Style";
+import RegistrationSuccess from "./Success/RegistrationSuccess";
 
-const { loginRequest, clearStates, setViewAction } = appActions
+const { loginRequest, clearStates, setViewAction } = appActions;
 
 const Login = ({ onClickSetView }) => {
-  const appStore = useSelector((state) => state.app)
-  const [error, setError] = useState('')
-  const dispatch = useDispatch()
+  const appStore = useSelector((state) => state.app);
+  const [error, setError] = useState("");
+  const dispatch = useDispatch();
   const initialValues = {
-    email: '',
-    password: ''
+    email: "",
+    password: "",
     // rememberMe: ''
-  }
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const { t } = useTranslation()
+  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { t } = useTranslation();
 
   const onSubmit = useCallback(
     (values) => {
-      dispatch(loginRequest(values))
+      dispatch(loginRequest(values));
     },
     [dispatch]
-  )
+  );
 
   const validationSchema = Yup.object().shape({
     email: Yup.string()
-      .email(t('Enter a valid email'))
-      .required(t('Email is required')),
-    password: Yup.string().required(t('Password is required'))
-  })
+      .email(t("Enter a valid email"))
+      .required(t("Email is required")),
+    password: Yup.string().required(t("Password is required")),
+  });
 
   useEffect(() => {
-    const t = new URL(window.location.href).searchParams.get('t')
-    const page = new URL(window.location.href).searchParams.get('page')
-    dispatch(clearStates())
+    const t = new URL(window.location.href).searchParams.get("t");
+    const page = new URL(window.location.href).searchParams.get("page");
+    dispatch(clearStates());
     // Clear query strings
     if (t || page) {
-      window.location.search = ''
+      window.location.search = "";
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   useEffect(() => {
-    const { submitting, isAuthenticated, token, error } = appStore
-    setIsSubmitting(submitting)
+    const { submitting, isAuthenticated, token, error } = appStore;
+    setIsSubmitting(submitting);
     if (error && error.response) {
-      setError(error.response.data)
+      setError(error.response.data);
     }
     if (isAuthenticated && token) {
-      dispatch(setViewAction(views.PROFILE))
+      dispatch(setViewAction(views.PROFILE));
     }
-  }, [appStore, dispatch])
+  }, [appStore, dispatch]);
 
   return (
     <LoginWrapper>
       <div className="login-container">
         <div className="fields">
           <div className="header">
-            <h4>{t('Log in')}</h4>
+            <h4>{t("Log in")}</h4>
             {error ? (
               <Alert color="danger">{JSON.stringify(error)}</Alert>
             ) : null}
@@ -84,16 +85,16 @@ const Login = ({ onClickSetView }) => {
                 errors,
                 handleChange,
                 handleBlur,
-                handleSubmit
+                handleSubmit,
               }) => (
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <LabelWrapper>
-                      <p>{t('E-mail')}</p>
+                      <p>{t("E-mail")}</p>
                     </LabelWrapper>
                     <TextInput
                       type="email"
-                      placeholder={t('Enter your e-mail')}
+                      placeholder={t("Enter your e-mail")}
                       name="email"
                       value={values.email}
                       handleBlur={handleBlur}
@@ -105,11 +106,11 @@ const Login = ({ onClickSetView }) => {
                   </div>
                   <div className="mb-3">
                     <LabelWrapper>
-                      <p>{t('Password')}</p>
+                      <p>{t("Password")}</p>
                     </LabelWrapper>
                     <TextInput
                       type="password"
-                      placeholder={t('Enter your password')}
+                      placeholder={t("Enter your password")}
                       name="password"
                       value={values.password}
                       handleBlur={handleBlur}
@@ -136,32 +137,32 @@ const Login = ({ onClickSetView }) => {
                     
                   </div> */}
                   <div className="login-box mt-4">
-                    <div className='px-2'>
+                    <div className="px-2">
                       <Button
-                        title={t('Log in')}
+                        title={t("Log in")}
                         type="submit"
                         loading={isSubmitting}
                       />
                     </div>
-                    <div className='px-2'>
+                    <div className="px-2">
                       <ButtonInverseWrapper>
                         <button type="button" className="btn btn-primary">
                           <span
                             className="login-link"
                             onClick={() => onClickSetView(views.REGISTER)}
                           >
-                            {t('Register')}
+                            {t("Register")}
                           </span>
                         </button>
                       </ButtonInverseWrapper>
                     </div>
-                    <div className='px-2'>
+                    <div className="px-2">
                       <p>
                         <span
                           className="login-link"
                           onClick={() => onClickSetView(views.FORGOT_PASSWORD)}
                         >
-                          {t('Forgotten password?')}
+                          {t("Forgotten password?")}
                         </span>
                       </p>
                     </div>
@@ -172,8 +173,8 @@ const Login = ({ onClickSetView }) => {
           </div>
         </div>
       </div>
-    </LoginWrapper >
-  )
-}
+    </LoginWrapper>
+  );
+};
 
-export default Login
+export default Login;

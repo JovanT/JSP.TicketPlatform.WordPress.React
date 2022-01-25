@@ -65,12 +65,11 @@ const CheckboxWrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   .btn {
-    ${'' /* border: 1px solid #d80c0c; */}
     background-color:  #d80c0c;
     color: #fff;
     border-radius: 10px;
     font: normal normal bold 1rem Open Sans;
-    width: 25%;
+    ${'' /* width: 25%; */}
   }
 `;
 
