@@ -1,6 +1,152 @@
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   background: #fff;
+}
+/* View Profile */
+.profile-top {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5em;
+}
+.profile-header {
+  margin: 10px 0 0 0;
+  display: flex;
+  width: 55%;
+  justify-content: center;
+}
+.profile-header h4 {
+  color: #d80c0c;
+}
+
+.profile-header .profile-image {
+  margin-right: 50px;
+}
+
+.back a,
+.logout {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Edit Profile */
+.edit-profile-top {
+  width: 100%;
+  margin-top: 5em;
+  padding-left: 10%;
+}
+
+.edit-header-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.edit-header-box h4 {
+  color: #d80c0c;
+}
+.edit-profile-btn {
+  text-align: center;
+}
+
+/* View Products */
+
+.amoun {
+  color: #d80c0c;
+  font-weight: 600;
+}
+
+.purchaseBtn {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Profile */
+
+.add-card img {
+  width: 20rem;
+  height: 10rem;
+}
+.add-card button {
+  background-color: #d80c0c;
+  margin: 0 50px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  padding: 2px;
+}
+
+.plus,
+.profile-image {
+  cursor: pointer;
+}
+
+/* Product Details */
+
+.confirm-btn {
+  border-radius: 10px;
+  background-color: #d80c0c;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #eeeeee;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+/* View Card */
+.viewcard {
+  display: flex;
+}
+.card-footer-alt {
+  width: 420px;
+}
+
+.details {
+  padding-top: 100px;
+  font-weight: 600;
+  width: 300px;
+}
+.topID h4 {
+  border-bottom: 2px solid grey;
+  color: #d80c0c;
+}
+.view-card-button {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-card-button button:first-child {
+  background-color: #d80c0c;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid red;
+}
+.view-card-button button:last-child {
+  background-color: #fff;
+  padding: 15px;
+  color: #d80c0c;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid red;
+}
+
+.view-card-button h4 {
+  margin-left: 40px;
+}
+.active-service {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 10px;
+}
+.active-service button {
+  background-color: green;
 }

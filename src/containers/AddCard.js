@@ -1,89 +1,88 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { AddCardWrapper } from './Style'
-import { Formik } from 'formik'
-import * as Yup from 'yup'
-import TextInput from '../components/form/TextInput'
-import Button from '../components/form/Button'
-import Select from '../components/form/Select'
-import { views } from '../constants/views'
-import { useSelector, useDispatch } from 'react-redux'
-import appActions from '../store/app/actions'
-import { Alert } from 'reactstrap'
-import { useTranslation } from 'react-i18next'
+import React, { useState, useEffect, useCallback } from "react";
+import { AddCardWrapper } from "./Style";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import TextInput from "../components/form/TextInput";
+import Button from "../components/form/Button";
+import Select from "../components/form/Select";
+import { views } from "../constants/views";
+import { useSelector, useDispatch } from "react-redux";
+import appActions from "../store/app/actions";
+import { Alert } from "reactstrap";
+import { useTranslation } from "react-i18next";
 
-const { addUserCardsRequest, setViewAction, clearStates } = appActions
+const { addUserCardsRequest, setViewAction, clearStates } = appActions;
 
 const options = [
   {
-    label: 'Personalized',
-    value: 1
+    label: "Personalized",
+    value: 1,
   },
   {
-    label: 'Not Personalized',
-    value: 2
-  }
-]
+    label: "Not Personalized",
+    value: 2,
+  },
+];
 
 const AddCard = ({ onClickSetView }) => {
-  const dispatch = useDispatch()
-  const appStore = useSelector((state) => state.app)
+  const dispatch = useDispatch();
+  const appStore = useSelector((state) => state.app);
   const initialValues = {
-    CardType: '',
-    cuid: '',
+    CardType: "",
+    cuid: "",
     historyView: true,
-    name: '',
-    notes: '',
+    name: "",
+    notes: "",
     personal: true,
     purchase: true,
-    activationCode: '',
-    Status: 1
-  }
+    activationCode: "",
+    Status: 1,
+  };
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [error, setError] = useState(null)
-  const { t } = useTranslation()
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+  const { t } = useTranslation();
 
   const onSubmit = useCallback(
     (values) => {
-      dispatch(addUserCardsRequest(values))
+      dispatch(addUserCardsRequest(values));
     },
     [dispatch]
-  )
+  );
 
   const validationSchema = Yup.object().shape({
-    activationCode: Yup.string().required(t('This field is required')),
-    cuid: Yup.string().required(t('This field is required')),
-    name: Yup.string().required(t('This field is required')),
-    notes: Yup.string().required(t('This field is required')),
-    CardType: Yup.string().required(t('This field is required'))
-  })
+    activationCode: Yup.string().required(t("This field is required")),
+    cuid: Yup.string().required(t("This field is required")),
+    name: Yup.string().required(t("This field is required")),
+    notes: Yup.string().required(t("This field is required")),
+    CardType: Yup.string().required(t("This field is required")),
+  });
 
   useEffect(() => {
-    dispatch(clearStates())
+    dispatch(clearStates());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   useEffect(() => {
-    const { submitting, isAddedCard, error } = appStore
-    setIsSubmitting(submitting)
-    setError(error)
+    const { submitting, isAddedCard, error } = appStore;
+    setIsSubmitting(submitting);
+    setError(error);
     if (isAddedCard) {
-      dispatch(setViewAction(views.PROFILE))
+      dispatch(setViewAction(views.PROFILE));
     }
-  }, [appStore, dispatch])
+  }, [appStore, dispatch]);
 
   return (
     <AddCardWrapper>
-      <div className="add-card-box">
-        <div className="header-box">
-          <h4>{t('Add card')}</h4>
-          <div
-            className="close-button"
-            onClick={() => onClickSetView(views.PROFILE)}
-          >
-            <i className="fa fa-close"></i>
-          </div>
+      <div className="edit-profile-top">
+        <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
+          <a href="#">Back</a>
         </div>
+      </div>
+      <div className="edit-header-box">
+        <h4>{t("Add card")}</h4>
+      </div>
+      <div className="add-card-box">
         <div className="form-wrapper">
           {error ? <Alert color="danger">{error}</Alert> : null}
           <Formik
@@ -97,14 +96,14 @@ const AddCard = ({ onClickSetView }) => {
               errors,
               handleChange,
               handleBlur,
-              handleSubmit
+              handleSubmit,
             }) => (
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <Select
                     name="CardType"
                     value={values.CardType}
-                    placeholder={t('Card Type')}
+                    placeholder={t("Card Type")}
                     options={options}
                     handleBlur={handleBlur}
                     handleChange={handleChange}
@@ -118,7 +117,7 @@ const AddCard = ({ onClickSetView }) => {
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('Activation Code')}
+                    placeholder={t("Activation Code")}
                     name="activationCode"
                     value={values.activationCode}
                     handleBlur={handleBlur}
@@ -132,7 +131,7 @@ const AddCard = ({ onClickSetView }) => {
                 </div>
                 <div className="mb-3">
                   <TextInput
-                    type="text"
+                    type="password"
                     placeholder="CUID"
                     name="cuid"
                     value={values.cuid}
@@ -144,7 +143,7 @@ const AddCard = ({ onClickSetView }) => {
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('Card name')}
+                    placeholder={t("Card name")}
                     name="name"
                     value={values.name}
                     handleBlur={handleBlur}
@@ -155,7 +154,7 @@ const AddCard = ({ onClickSetView }) => {
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('Card notes')}
+                    placeholder={t("Card notes")}
                     name="notes"
                     value={values.notes}
                     handleBlur={handleBlur}
@@ -164,11 +163,13 @@ const AddCard = ({ onClickSetView }) => {
                   />
                 </div>
                 <div className="mt-4">
+                <div className="edit-profile-btn">
+
                   <Button
-                    title={t('Submit')}
+                    title={t("Submit")}
                     type="submit"
                     loading={isSubmitting}
-                  />
+                  /></div>
                 </div>
               </form>
             )}
@@ -176,7 +177,7 @@ const AddCard = ({ onClickSetView }) => {
         </div>
       </div>
     </AddCardWrapper>
-  )
-}
+  );
+};
 
-export default AddCard
+export default AddCard;

@@ -1,105 +1,107 @@
-import React, { useState, useCallback, useEffect } from 'react'
-import { EditProfileWrapper } from './Style'
-import { Formik, Form } from 'formik'
-import * as Yup from 'yup'
-import TextInput from '../components/form/TextInput'
-import Button from '../components/form/Button'
-import Select from '../components/form/Select'
-import { views } from '../constants/views'
-import { useTranslation } from 'react-i18next'
-import { useSelector, useDispatch } from 'react-redux'
-import appActions from '../store/app/actions'
-import { Alert } from 'reactstrap'
+import React, { useState, useCallback, useEffect } from "react";
+import { EditProfileWrapper } from "./Style";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import TextInput from "../components/form/TextInput";
+import Button from "../components/form/Button";
+import Select from "../components/form/Select";
+import { views } from "../constants/views";
+import { useTranslation } from "react-i18next";
+import { useSelector, useDispatch } from "react-redux";
+import appActions from "../store/app/actions";
+import { Alert } from "reactstrap";
 
-const { editProfileRequest, clearStates } = appActions
+const { editProfileRequest, clearStates } = appActions;
 
 const options = [
   {
-    label: 'MK',
-    value: 0
+    label: "MK",
+    value: 0,
   },
   {
-    label: 'EN',
-    value: 1
-  }
-]
+    label: "EN",
+    value: 1,
+  },
+];
 
 const EditProfile = ({ onClickSetView }) => {
-  const { t } = useTranslation()
-  const appStore = useSelector((state) => state.app)
-  const { user } = appStore
-  const dispatch = useDispatch()
+  const { t } = useTranslation();
+  const appStore = useSelector((state) => state.app);
+  const { user } = appStore;
+  const dispatch = useDispatch();
   const initialValues = {
-    address: user ? user.address : '',
-    city: user ? user.city : '',
-    companyName: user ? user.companyName : '',
-    country: user ? user.country : '',
-    createDate: user ? user.createDate : '',
-    cultureInfo: user ? user.cultureInfo : '',
+    address: user ? user.address : "",
+    city: user ? user.city : "",
+    companyName: user ? user.companyName : "",
+    country: user ? user.country : "",
+    createDate: user ? user.createDate : "",
+    cultureInfo: user ? user.cultureInfo : "",
     // email: user ? user.email : '',
-    fbToken: user ? user.fbToken : '',
-    firstName: user ? user.firstName : '',
+    fbToken: user ? user.fbToken : "",
+    firstName: user ? user.firstName : "",
     id: user ? user.id : 0,
-    identityNumber: user ? user.identityNumber : '',
-    lastName: user ? user.lastName : '',
-    msisdn: user ? user.msisdn : '',
-    password: user ? user.password : '',
+    identityNumber: user ? user.identityNumber : "",
+    lastName: user ? user.lastName : "",
+    msisdn: user ? user.msisdn : "",
+    password: user ? user.password : "",
     receiveEducational: true,
     receivePromotional: true,
-    sipassId: user ? user.sipassId : '',
-    state: user ? user.state : '',
+    sipassId: user ? user.sipassId : "",
+    state: user ? user.state : "",
     status: user ? user.status : 0,
-    taxNumber: user ? user.taxNumber : '',
+    taxNumber: user ? user.taxNumber : "",
     type: user ? user.type : 0,
-    userName: user ? user.userName : '',
+    userName: user ? user.userName : "",
     verified: user ? user.verified : 0,
     zip: user ? user.zip : 0,
-    activationUrl: user ? user.activationUrl : ''
-  }
+    activationUrl: user ? user.activationUrl : "",
+  };
   const validationSchema = Yup.object().shape({
-    firstName: Yup.string().required(t('This field is required')),
-    lastName: Yup.string().required(t('This field is required'))
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [error, setError] = useState(null)
+    firstName: Yup.string().required(t("This field is required")),
+    lastName: Yup.string().required(t("This field is required")),
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
 
   const onSubmit = useCallback(
     (values) => {
-      dispatch(editProfileRequest(values))
+      dispatch(editProfileRequest(values));
     },
     [dispatch]
-  )
+  );
 
   useEffect(() => {
-    clearStates()
+    clearStates();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   useEffect(() => {
-    const { isEditProfile, submitting, error } = appStore
-    setIsSubmitting(submitting)
+    const { isEditProfile, submitting, error } = appStore;
+    setIsSubmitting(submitting);
     if (isEditProfile) {
-      onClickSetView(views.PROFILE)
+      onClickSetView(views.PROFILE);
     }
     if (error) {
-      setError(error)
+      setError(error);
     }
-  }, [appStore, onClickSetView])
+  }, [appStore, onClickSetView]);
 
   return (
     <EditProfileWrapper>
-      <div className="add-card-box">
-        <div className="header-box">
-          <h4>{t('Edit profile')}</h4>
-          <div
-            className="close-button"
-            onClick={() => onClickSetView(views.VIEW_PROFILE)}
-          >
-            <i className="fa fa-close"></i>
-          </div>
+      <div className="edit-profile-top">
+        <div
+          className="back"
+          onClick={() => onClickSetView(views.VIEW_PROFILE)}
+        >
+          <a href="#">Back</a>
         </div>
+      </div>
+      <div className="edit-header-box">
+        <h4>{t("Edit profile")}</h4>
+      </div>
+      <div className="add-card-box">
         <div className="form-wrapper">
-          <p className="note">{t('Input new data for your profile')}</p>
+          <p className="note">{t("Input new data for your profile")}</p>
           {error ? <Alert color="danger">{JSON.stringify(error)}</Alert> : null}
           <Formik
             initialValues={initialValues}
@@ -112,13 +114,13 @@ const EditProfile = ({ onClickSetView }) => {
               errors,
               handleChange,
               handleBlur,
-              handleSubmit
+              handleSubmit,
             }) => (
               <Form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('First Name')}
+                    placeholder={t("First Name")}
                     name="firstName"
                     value={values.firstName}
                     handleBlur={handleBlur}
@@ -133,7 +135,7 @@ const EditProfile = ({ onClickSetView }) => {
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('Last Name')}
+                    placeholder={t("Last Name")}
                     name="lastName"
                     value={values.lastName}
                     handleBlur={handleBlur}
@@ -148,7 +150,7 @@ const EditProfile = ({ onClickSetView }) => {
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('Mobile number')}
+                    placeholder={t("Mobile number")}
                     name="msisdn"
                     value={values.msisdn}
                     handleBlur={handleBlur}
@@ -161,7 +163,7 @@ const EditProfile = ({ onClickSetView }) => {
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('Address')}
+                    placeholder={t("Address")}
                     name="address"
                     value={values.address}
                     handleBlur={handleBlur}
@@ -174,7 +176,7 @@ const EditProfile = ({ onClickSetView }) => {
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('City')}
+                    placeholder={t("City")}
                     name="city"
                     value={values.city}
                     handleBlur={handleBlur}
@@ -185,7 +187,7 @@ const EditProfile = ({ onClickSetView }) => {
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('Zip')}
+                    placeholder={t("Zip")}
                     name="zip"
                     value={values.zip}
                     handleBlur={handleBlur}
@@ -196,7 +198,7 @@ const EditProfile = ({ onClickSetView }) => {
                 <div className="mb-3">
                   <TextInput
                     type="text"
-                    placeholder={t('Country')}
+                    placeholder={t("Country")}
                     name="country"
                     value={values.country}
                     handleBlur={handleBlur}
@@ -218,16 +220,18 @@ const EditProfile = ({ onClickSetView }) => {
                         ? errors.cultureInfo
                         : null
                     }
-                    placeholder={t('Language')}
+                    placeholder={t("Language")}
                   />
                 </div>
 
-                <div className="mt-4">
-                  <Button
-                    title={t('Submit')}
-                    type="submit"
-                    loading={isSubmitting}
-                  />
+                <div className="mt-4 ">
+                  <div className="edit-profile-btn">
+                    <Button
+                      title={t("Submit")}
+                      type="submit"
+                      loading={isSubmitting}
+                    />
+                  </div>
                 </div>
               </Form>
             )}
@@ -235,7 +239,7 @@ const EditProfile = ({ onClickSetView }) => {
         </div>
       </div>
     </EditProfileWrapper>
-  )
-}
+  );
+};
 
-export default EditProfile
+export default EditProfile;

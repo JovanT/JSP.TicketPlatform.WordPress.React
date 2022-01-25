@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const LayoutWarpper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-`
+`;
 
 const RegisterWrapper = styled.div`
   width: 100%;
@@ -136,7 +136,7 @@ const RegisterWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 const LoginWrapper = styled.div`
   width: 100%;
@@ -161,7 +161,7 @@ const LoginWrapper = styled.div`
         margin-bottom: 2rem;
         h4 {
           font: normal normal bold 2rem Open Sans;
-          color: #D80C0C;
+          color: #d80c0c;
         }
       }
 
@@ -266,7 +266,7 @@ const LoginWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 const VerificationWrapper = styled.div`
   width: 100%;
@@ -359,7 +359,7 @@ const VerificationWrapper = styled.div`
       width: 50%;
     }
   }
-`
+`;
 const LoadingContainer = styled.div`
   color: #a20c25;
   font-size: 2rem;
@@ -370,7 +370,7 @@ const LoadingContainer = styled.div`
     font-size: 0.9rem;
     font-weight: 300;
   }
-`
+`;
 
 const VerificationContainer = styled.div`
   width: 100%;
@@ -401,7 +401,7 @@ const VerificationContainer = styled.div`
       margin-left: 1rem;
     }
   }
-`
+`;
 
 const VerificationButtonLink = styled.div`
   text-align: left;
@@ -417,7 +417,7 @@ const VerificationButtonLink = styled.div`
     text-transform: uppercase;
     font-weight: 300;
   }
-`
+`;
 
 const ProfileWrapper = styled.div`
   display: flex;
@@ -434,7 +434,7 @@ const ProfileWrapper = styled.div`
     width: 70%;
     flex-wrap: wrap;
     background: #fafafa;
-    margin-top: 10rem;
+    margin-top: 1rem;
     padding: 2rem;
 
     .profile {
@@ -484,12 +484,13 @@ const ProfileWrapper = styled.div`
 
       .add-card {
         width: 20rem;
-        height: 10rem;
+        height: 12.5rem;
         border: 1px solid #eeeeee;
-        padding: 0.2rem;
         background: #fff;
-        cursor: pointer;
         border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+
         .inner-card {
           border: 1px solid #eeeeee;
           display: flex;
@@ -506,8 +507,7 @@ const ProfileWrapper = styled.div`
             rgba(162, 12, 37, 1) 0%,
             rgba(34, 34, 34, 1) 100%
           );
-          border: none;
-
+          border: 1px solid blue;
           text-align: center;
           display: flex;
           justify-content: center;
@@ -530,7 +530,7 @@ const ProfileWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 const AddCardWrapper = styled.div`
   width: 100%;
@@ -544,7 +544,7 @@ const AddCardWrapper = styled.div`
     border: 1px solid #eeeeee;
     width: 30%;
     background: #fff;
-    margin-top: 10rem;
+    margin-top: 1rem;
     padding: 2rem;
     border-radius: 5px;
 
@@ -607,7 +607,7 @@ const AddCardWrapper = styled.div`
       width: 30%;
     }
   }
-`
+`;
 const ViewProductWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -622,7 +622,7 @@ const ViewProductWrapper = styled.div`
     width: 50%;
     background: #fff;
     margin-bottom: 1rem;
-    align:center;
+    align: center;
     padding: 2rem;
 
     .header-box {
@@ -670,7 +670,7 @@ const ViewProductWrapper = styled.div`
           counter-reset: section;
 
           > li:before {
-            content: counters(section, '.') '. ';
+            content: counters(section, ".") ". ";
             counter-increment: section;
           }
         }
@@ -697,20 +697,20 @@ const ViewProductWrapper = styled.div`
         }
 
         .productName {
-          border-radius: 16px;
+          border-radius: 10px;
           color: #fff;
-          background-color: #00C770;
-          padding: 0.5rem 1rem;
+          background-color: #00c770;
+          padding: 0.8rem 1rem;
           font-weight: 600;
-          width: 200px;
+          width: 150px;
           text-align: center;
-        },
+        }
+        ,
         .amount {
           font: normal normal normal 15px/19px Open Sans;
-
         }
         .purchaseBtn {
-          border-radius: 16px;
+          border-radius: 10px;
           background-color: #fff;
           padding: 0.2rem 0.4rem;
           border: 1px solid #eeeeee;
@@ -746,7 +746,7 @@ const ViewProductWrapper = styled.div`
       }
 
       .values {
-        width: 30%;
+        ${"" /* width: 30%; */}
         text-align: left;
         padding-left: 3rem;
 
@@ -811,7 +811,7 @@ const ViewProductWrapper = styled.div`
       width: 50%;
     }
   }
-`
+`;
 
 const ViewProfileWrapper = styled.div`
   width: 100%;
@@ -825,7 +825,7 @@ const ViewProfileWrapper = styled.div`
     border: 1px solid #eeeeee;
     width: 50%;
     background: #fff;
-    margin-top: 10rem;
+    margin-top: 1rem;
     padding: 2rem;
     border-radius: 5px;
 
@@ -866,7 +866,7 @@ const ViewProfileWrapper = styled.div`
         .btn {
           border: 1px solid #a20c25;
           margin-top: 1rem;
-          background: #a20c25;
+          background: #d80c0c;
           color: #fff;
           font-size: 0.85rem;
           padding: 0.5rem 1.2rem 0.5rem 1.2rem;
@@ -889,7 +889,7 @@ const ViewProfileWrapper = styled.div`
         .btn {
           border: 1px solid #a20c25;
           margin-top: 1rem;
-          background: #a20c25;
+          background: #d80c0c;
           color: #fff;
           font-size: 0.85rem;
           padding: 0.5rem 1.2rem 0.5rem 1.2rem;
@@ -941,7 +941,7 @@ const ViewProfileWrapper = styled.div`
       width: 50%;
     }
   }
-`
+`;
 
 const EditProfileWrapper = styled.div`
   width: 100%;
@@ -955,7 +955,7 @@ const EditProfileWrapper = styled.div`
     border: 1px solid #eeeeee;
     width: 30%;
     background: #fff;
-    margin-top: 10rem;
+    margin-top: 1rem;
     padding: 2rem;
     border-radius: 5px;
 
@@ -1026,10 +1026,10 @@ const EditProfileWrapper = styled.div`
       width: 30%;
     }
   }
-`
+`;
 
 const ViewCardWrapper = styled.div`
-  width: 100%;
+  ${"" /* width: 100%; */}
   display: flex;
   justify-content: center;
   background: #fff;
@@ -1113,7 +1113,6 @@ const ViewCardWrapper = styled.div`
     }
 
     .card-footer-alt {
-      display: flex;
       justify-content: space-between;
       padding-top: 1rem;
 
@@ -1167,7 +1166,7 @@ const ViewCardWrapper = styled.div`
       width: 50%;
     }
   }
-`
+`;
 
 export {
   LayoutWarpper,
@@ -1182,5 +1181,5 @@ export {
   ViewProductWrapper,
   ViewProfileWrapper,
   EditProfileWrapper,
-  ViewCardWrapper
-}
+  ViewCardWrapper,
+};
