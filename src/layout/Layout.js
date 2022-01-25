@@ -11,6 +11,7 @@ const Login = lazy(() => import('../containers/Login'))
 const Activate = lazy(() => import('../containers/Activate'))
 const ForgottenPassword = lazy(() => import('../containers/ForgottenPassword'))
 const RegisterSuccess = lazy(() => import('../containers/RegisterSuccess'))
+const RegisterFailure = lazy(() => import('../containers/RegisterFailure'))
 const VerificationFailure = lazy(() =>
   import('../containers/VerificationFailure')
 )
@@ -86,7 +87,10 @@ const Layout = () => {
       viewToShow = <VerificationSuccess />
       break
     case views.REGISTER_SUCCESS:
-      viewToShow = <RegisterSuccess />
+      viewToShow = <RegisterSuccess  onClickSetView={onClickSetView} />
+      break
+    case views.REGISTER_FAILURE:
+      viewToShow = <RegisterFailure  onClickSetView={onClickSetView} />
       break
     case views.PROFILE:
       viewToShow = <Profile onClickSetView={onClickSetView} />
