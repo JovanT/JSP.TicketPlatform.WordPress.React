@@ -408,13 +408,14 @@ const VerificationButtonLink = styled.div`
   margin-left: 1rem;
 
   .btn {
-    background: #a20c25;
-    color: #fff;
     border: none;
+    background-color: #d80c0c00;
+    color: #0e3d85;
     border-radius: 2px;
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     font-size: 1rem;
     text-transform: uppercase;
+    margin-left: 80px;
     font-weight: 300;
   }
 `;

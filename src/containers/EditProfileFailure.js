@@ -6,14 +6,14 @@ import { VerificationContainer, VerificationButtonLink } from "./Style";
 
 const { clearStates } = appActions;
 
-const RegisterFailure = ({ onClickSetView }) => {
+const EditProfileFailure = ({ onClickSetView }) => {
   const dispatch = useDispatch();
 
   return (
     <VerificationContainer>
       <div className="login-container shadow-sm">
         <div className="unsuccessful">
-          <h1 className="headertext"> Unsuccessful registration!</h1>
+          <h1 className="headertext"> Error, Please try again</h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="304"
@@ -79,15 +79,7 @@ const RegisterFailure = ({ onClickSetView }) => {
 
         <VerificationButtonLink>
           <a href="#jsp">
-            <button
-              className="btn"
-              onClick={() => {
-                dispatch(clearStates());
-                onClickSetView(views.REGISTER);
-              }}
-            >
-              Try again
-            </button>
+            <button className="btn">Try again</button>
           </a>
         </VerificationButtonLink>
       </div>
@@ -95,4 +87,4 @@ const RegisterFailure = ({ onClickSetView }) => {
   );
 };
 
-export default RegisterFailure;
+export default EditProfileFailure;

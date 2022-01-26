@@ -1,12 +1,12 @@
 import React from "react";
 import { VerificationContainer, VerificationButtonLink } from "./Style";
 
-const RegisterSuccess = () => {
+const EditProfileSuccess = () => {
   return (
     <VerificationContainer>
       <div className="login-container shadow-sm">
         <div className="successful">
-          <h1 className="headertext"> Successful registration!</h1>
+          <h1 className="headertext"> The data is updated!</h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="304"
@@ -57,12 +57,13 @@ const RegisterSuccess = () => {
               />
             </g>
           </svg>
+
           <br />
           <br />
         </div>
         <VerificationButtonLink>
           <a href="#jsp">
-            <button className="btn"> Proceed to Login</button>
+            <button className="btn"> To the profile</button>
           </a>
         </VerificationButtonLink>
       </div>
@@ -70,4 +71,4 @@ const RegisterSuccess = () => {
   );
 };
 
-export default RegisterSuccess;
+export default EditProfileSuccess;
