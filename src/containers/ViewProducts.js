@@ -50,7 +50,6 @@ const ViewProducts = ({ onClickSetView }) => {
 
   return (
     <ViewProductWrapper>
-    
       <div className="profile-top">
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
           <a>Back</a>
@@ -69,6 +68,23 @@ const ViewProducts = ({ onClickSetView }) => {
       </div>
       <div className="card-box shadow-sm rounded">
         <div>{t("Current card status")}</div>
+        <div className="card-details">
+          <div className="list-group list-group-numbered">
+            {isEmpty(products) ? (
+              <Spinner />
+            ) : (
+              <div className="list-group-item justify-content-between align-items-center">
+                <div className="amoun card-amount">400 MKD</div>
+                <div className="card-status-text">
+                  <p>Not exceeding MKD 3000</p>
+                </div>
+                <div className="card-statusBtn" onClick={() => onClickProduct()}>
+                  {t("Confirm")}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
       <div className="card-box shadow-sm rounded-3">
         <div className="header-box">
