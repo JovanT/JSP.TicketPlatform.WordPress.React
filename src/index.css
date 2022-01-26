@@ -215,3 +215,38 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
+/* Card History */
+.cardhistory {
+  margin-top: 8em;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  background-color: white;
+  box-shadow: -10px 10px 10px #bbbbbb;
+}
+.cardhistoryselect {
+  width: 300px;
+  height: 3em;
+  background-color: rgb(231, 231, 231);
+  border-radius: 8px;
+  border: none;
+  align-self: center;
+}
+.history {
+  /* border: 1px solid red; */
+  width: 40em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: center;
+}
+
+input[type="date"] {
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 3px solid red;
+}
+input[type="date"]:focus{
+  outline: #00c77000;
+}

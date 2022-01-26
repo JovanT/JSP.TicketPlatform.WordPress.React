@@ -3,6 +3,7 @@ import { views } from "../constants/views";
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 import appActions from "../store/app/actions";
+import { Label } from "reactstrap";
 
 const { logout, getUserCardsRequest, setUserCard, clearStates } = appActions;
 
@@ -30,12 +31,6 @@ const CardHistory = ({ onClickSetView }) => {
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
           <a>Card</a>
         </div>
-        <div
-          className="back"
-          onClick={() => onClickSetView(views.VIEW_PROFILE)}
-        >
-          <a>View Profile</a>
-        </div>
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
           <a>Card History</a>
         </div>
@@ -50,8 +45,20 @@ const CardHistory = ({ onClickSetView }) => {
       </div>
       <div className="cardhistory">
         <div className="history">
-          <input type="date" placeholder="Date from" />
-          <input type="date" placeholder="Date to" />{" "}
+          <div>
+            <Label>
+              <b>Date from</b>
+            </Label>
+            <br />
+            <input type="date" placeholder="Date from" />
+          </div>
+          <div>
+            <Label>
+              <b>Date to</b>
+            </Label>
+            <br />
+            <input type="date" placeholder="Date to" />
+          </div>
         </div>
         <select className="cardhistoryselect">
           <option>select a card </option>
