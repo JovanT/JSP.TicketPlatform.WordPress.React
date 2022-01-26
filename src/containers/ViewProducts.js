@@ -54,10 +54,7 @@ const ViewProducts = ({ onClickSetView }) => {
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
           <a>Back</a>
         </div>
-        <div
-          className="close-button"
-          onClick={() => onClickSetView(views.PROFILE)}
-        >
+        <div className="close-button">
           <span className="logout" onClick={() => onLogoutClick()}>
             {t("Logout")}
           </span>
@@ -78,7 +75,10 @@ const ViewProducts = ({ onClickSetView }) => {
                 <div className="card-status-text">
                   <p>Not exceeding MKD 3000</p>
                 </div>
-                <div className="card-statusBtn" onClick={() => onClickProduct()}>
+                <div
+                  className="card-statusBtn"
+                  onClick={() => onClickProduct()}
+                >
                   {t("Confirm")}
                 </div>
               </div>

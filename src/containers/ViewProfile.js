@@ -24,11 +24,10 @@ const ViewProfile = ({ onClickSetView }) => {
         <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
           <a>Back</a>
         </div>
-        <div
-          className="close-button"
-          onClick={() => onClickSetView(views.PROFILE)}
-        >
-          <span className="logout" onClick={() => onLogoutClick()}>{t("Logout")}</span>
+        <div className="close-button">
+          <span className="logout" onClick={() => onLogoutClick()}>
+            {t("Logout")}
+          </span>
         </div>
       </div>
       <div className="profile-header">
