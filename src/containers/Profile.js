@@ -55,7 +55,7 @@ const Profile = ({ onClickSetView }) => {
         >
           <a>View Profile</a>
         </div>
-        <div className="back" onClick={() => onClickSetView(views.PROFILE)}>
+        <div className="back" onClick={() => onClickSetView(views.CARDHISTORY)}>
           <a>Card History</a>
         </div>
         <div
