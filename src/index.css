@@ -193,3 +193,25 @@ body {
   margin-top: 110px;
   text-align: center;
 }
+.card-amount {
+  border-radius: 10px;
+  background-color: #e7e7e7;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  width: 150px;
+  text-align: center;
+}
+.card-status-text {
+  border: none;
+  color: #8b8b8b;
+  outline: #d80c0c00;
+  border-bottom: 2px solid #d80c0c;
+}
+.card-statusBtn {
+  background-color: #d80c0c;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
