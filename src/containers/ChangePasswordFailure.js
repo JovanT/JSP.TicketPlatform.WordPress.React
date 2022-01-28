@@ -28,9 +28,9 @@ const ChangePasswordFailure = ({ onClickSetView }) => {
                 transform="translate(28.012 0)"
                 fill="none"
                 stroke="#d80c0c"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <path
                 id="Rectangle_211"
@@ -39,9 +39,9 @@ const ChangePasswordFailure = ({ onClickSetView }) => {
                 transform="translate(304.037 346.945)"
                 fill="none"
                 stroke="#d80c0c"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <line
                 id="Line_54"
@@ -51,8 +51,8 @@ const ChangePasswordFailure = ({ onClickSetView }) => {
                 transform="translate(395.537 429.945)"
                 fill="none"
                 stroke="#d80c0c"
-                stroke-linecap="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeWidth="8"
               />
               <line
                 id="Line_55"
@@ -62,8 +62,8 @@ const ChangePasswordFailure = ({ onClickSetView }) => {
                 transform="translate(395.537 429.945)"
                 fill="none"
                 stroke="#d80c0c"
-                stroke-linecap="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeWidth="8"
               />
             </g>
           </svg>

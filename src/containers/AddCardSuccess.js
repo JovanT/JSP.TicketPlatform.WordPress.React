@@ -37,9 +37,9 @@ const AddCardSuccess = () => {
                 transform="translate(1809 663)"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokemiterlimit="10"
+                strokeWidth="8"
               />
               <line
                 id="Line_47"
@@ -48,9 +48,9 @@ const AddCardSuccess = () => {
                 transform="translate(1561 867)"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokemiterlimit="10"
+                strokeWidth="8"
               />
               <line
                 id="Line_48"
@@ -59,9 +59,9 @@ const AddCardSuccess = () => {
                 transform="translate(1561 819)"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokemiterlimit="10"
+                strokeWidth="8"
               />
               <ellipse
                 id="Ellipse_151"
@@ -73,9 +73,9 @@ const AddCardSuccess = () => {
                 transform="translate(1765 799)"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokemiterlimit="10"
+                strokeWidth="8"
               />
               <path
                 id="Path_767"
@@ -84,9 +84,9 @@ const AddCardSuccess = () => {
                 transform="translate(141.112 111.179)"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
             </g>
           </svg>
