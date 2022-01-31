@@ -21,11 +21,25 @@ const VerificationSuccess = lazy(() =>
 );
 const Profile = lazy(() => import("../containers/Profile"));
 const AddCard = lazy(() => import("../containers/AddCard"));
+const AddCardFailure = lazy(() => import("../containers/AddCardFailure"));
+const AddCardSuccess = lazy(() => import("../containers/AddCardSuccess"));
 const ViewProducts = lazy(() => import("../containers/ViewProducts"));
 const ProductDetails = lazy(() => import("../containers/ProductDetails"));
 const ViewProfile = lazy(() => import("../containers/ViewProfile"));
 const EditProfile = lazy(() => import("../containers/EditProfile"));
+const EditProfileFailure = lazy(() =>
+  import("../containers/EditProfileFailure")
+);
+const EditProfileSuccess = lazy(() =>
+  import("../containers/EditProfileSuccess")
+);
 const ChangePassword = lazy(() => import("../containers/ChangePassword"));
+const ChangePasswordFailure = lazy(() =>
+  import("../containers/ChangePasswordFailure")
+);
+const ChangePasswordSuccess = lazy(() =>
+  import("../containers/ChangePasswordSuccess")
+);
 const ViewCard = lazy(() => import("../containers/ViewCard"));
 const ResetPassword = lazy(() => import("../containers/ResetPassword"));
 
@@ -102,6 +116,12 @@ const Layout = () => {
     case views.ADD_CARD:
       viewToShow = <AddCard onClickSetView={onClickSetView} />;
       break;
+    case views.ADD_CARD_FAILURE:
+      viewToShow = <AddCardFailure onClickSetView={onClickSetView} />;
+      break;
+    case views.ADD_CARD_SUCCESS:
+      viewToShow = <AddCardSuccess onClickSetView={onClickSetView} />;
+      break;
     case views.VIEW_PRODUCTS:
       viewToShow = <ViewProducts onClickSetView={onClickSetView} />;
       break;
@@ -114,8 +134,20 @@ const Layout = () => {
     case views.EDIT_PROFILE:
       viewToShow = <EditProfile onClickSetView={onClickSetView} />;
       break;
+    case views.EDIT_PROFILE_FAILURE:
+      viewToShow = <EditProfileFailure onClickSetView={onClickSetView} />;
+      break;
+    case views.EDIT_PROFILE_SUCCESS:
+      viewToShow = <EditProfileSuccess onClickSetView={onClickSetView} />;
+      break;
     case views.CHANGE_PASSWORD:
       viewToShow = <ChangePassword onClickSetView={onClickSetView} />;
+      break;
+    case views.CHANGE_PASSWORD_FAILURE:
+      viewToShow = <ChangePasswordFailure onClickSetView={onClickSetView} />;
+      break;
+    case views.CHANGE_PASSWORD_SUCCESS:
+      viewToShow = <ChangePasswordSuccess onClickSetView={onClickSetView} />;
       break;
     case views.VIEW_CARD:
       viewToShow = <ViewCard onClickSetView={onClickSetView} />;

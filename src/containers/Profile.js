@@ -58,10 +58,7 @@ const Profile = ({ onClickSetView }) => {
         <div className="back" onClick={() => onClickSetView(views.CARDHISTORY)}>
           <a>Card History</a>
         </div>
-        <div
-          className="close-button"
-          onClick={() => onClickSetView(views.PROFILE)}
-        >
+        <div className="close-button">
           <span className="logout" onClick={() => onLogoutClick()}>
             {t("Logout")}
           </span>

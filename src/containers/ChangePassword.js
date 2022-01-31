@@ -66,7 +66,7 @@ const ChangePassword = ({ onClickSetView }) => {
           className="back"
           onClick={() => onClickSetView(views.VIEW_PROFILE)}
         >
-          <a href="#">Back</a>
+          <a>Back</a>
         </div>
       </div>
       <div className="edit-header-box">
