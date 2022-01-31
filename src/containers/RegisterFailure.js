@@ -31,8 +31,8 @@ const RegisterFailure = ({ onClickSetView }) => {
                 d="M1168,2193c18.646,0,32-13.066,32-32v-16c0-18.934-13.354-32-32-32s-32,13.066-32,32v16C1136,2179.934,1149.355,2193,1168,2193Z"
                 fill="none"
                 stroke="#d80c0c"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <path
                 id="Path_792"
@@ -40,26 +40,26 @@ const RegisterFailure = ({ onClickSetView }) => {
                 d="M1240,2265v-32c0-26.427-46.989-40-72-40s-72,13.573-72,40v32"
                 fill="none"
                 stroke="#d80c0c"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <path
                 id="Rectangle"
                 d="M1104,2137h-16a24,24,0,0,1-24-24V1937a24,24,0,0,1,24-24h248a24,24,0,0,1,24,24v176a24,24,0,0,1-24,24h-24l-41.685,53.595a8,8,0,0,1-14.315-4.911V2137h-24"
                 fill="none"
                 stroke="#d80c0c"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <g
                 id="Union_1"
                 data-name="Union 1"
                 transform="translate(-4090.275 -9291.275)"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path
                   d="M5306.276,11341.268l-28.284,28.284L5249,11340.559l28.285-28.283L5249,11283.99l28.993-28.99,28.284,28.284,28.285-28.284,28.99,28.99-28.284,28.285,28.284,28.283-28.99,28.993Z"

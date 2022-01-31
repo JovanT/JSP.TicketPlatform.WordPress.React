@@ -24,8 +24,8 @@ const RegisterSuccess = () => {
                 d="M1168,2193c18.646,0,32-13.066,32-32v-16c0-18.934-13.354-32-32-32s-32,13.066-32,32v16C1136,2179.934,1149.355,2193,1168,2193Z"
                 fill="none"
                 stroke="#00c770"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <path
                 id="Path_792"
@@ -33,18 +33,18 @@ const RegisterSuccess = () => {
                 d="M1240,2265v-32c0-26.427-46.989-40-72-40s-72,13.573-72,40v32"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <path
                 id="Rectangle"
                 d="M1104,2137h-16a24,24,0,0,1-24-24V1937a24,24,0,0,1,24-24h248a24,24,0,0,1,24,24v176a24,24,0,0,1-24,24h-24l-41.685,53.595a8,8,0,0,1-14.315-4.911V2137h-24"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <path
                 id="Path_793"
@@ -52,8 +52,8 @@ const RegisterSuccess = () => {
                 d="M1256,1969l-56,56-24-24-24,24,48,48,80-80Z"
                 fill="none"
                 stroke="#00c770"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
             </g>
           </svg>

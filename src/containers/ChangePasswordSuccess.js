@@ -24,9 +24,9 @@ const ChangePasswordSuccess = () => {
                 transform="translate(28.012 0)"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <path
                 id="Rectangle_211"
@@ -35,9 +35,9 @@ const ChangePasswordSuccess = () => {
                 transform="translate(304.037 346.945)"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
               <path
                 id="Path_767"
@@ -46,9 +46,9 @@ const ChangePasswordSuccess = () => {
                 transform="translate(-1284.068 -315.383)"
                 fill="none"
                 stroke="#00c770"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="8"
               />
             </g>
           </svg>
